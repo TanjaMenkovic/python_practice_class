@@ -1,0 +1,179 @@
+1. Create a Simple Class
+
+Write a class called Person that:
+Has attributes name and age.
+Includes a method greet() that prints a greeting with the person's name.
+
+Task:
+# Instantiate the class and call the greet method
+person1 = Person("Alice", 25)
+person1.greet()  # Output: "Hello, my name is Alice."
+
+--------------------------------------------------------------------------------------------
+
+2. Class with Constructor
+
+Write a class Circle that:
+Accepts the radius as a parameter in its constructor.
+Has a method area() to calculate the area of the circle.
+Has a method circumference() to calculate the circumference.
+
+Task:
+circle1 = Circle(5)
+print(circle1.area())  # Output: 78.54 (approximately)
+print(circle1.circumference())  # Output: 31.42 (approximately)
+
+--------------------------------------------------------------------------------------------
+
+3. Encapsulation
+
+Create a class BankAccount that:
+Has a private attribute __balance.
+Allows users to deposit and withdraw money via methods deposit(amount) and withdraw(amount).
+Prevents withdrawal if the balance is insufficient and prints an error message.
+
+Task:
+account = BankAccount(100)
+account.deposit(50)
+account.withdraw(30)
+account.withdraw(200)  # Output: "Insufficient balance."
+
+--------------------------------------------------------------------------------------------
+
+4. Class Inheritance
+
+Write a base class Vehicle that:
+Has attributes make and model.
+Has a method info() to display the make and model.
+
+Create a subclass Car that:
+Adds an attribute seats.
+Overrides the info() method to include the number of seats.
+
+Task:
+car = Car("Toyota", "Corolla", 5)
+car.info()  # Output: "Make: Toyota, Model: Corolla, Seats: 5"
+
+--------------------------------------------------------------------------------------------
+
+5. Polymorphism
+
+Create a base class Shape with a method area(). Then, create subclasses:
+Rectangle with area() calculating width * height.
+Circle with area() calculating π * radius^2.
+
+Task:
+shapes = [Rectangle(4, 5), Circle(3)]
+for shape in shapes:
+    print(shape.area())
+
+--------------------------------------------------------------------------------------------
+
+6. Class Methods and Static Methods
+
+Create a class MathOperations that:
+Has a static method add(x, y) to add two numbers.
+Has a class method describe() that returns "This class provides basic math operations."
+
+Task:
+print(MathOperations.add(5, 3))  # Output: 8
+print(MathOperations.describe())  # Output: "This class provides basic math operations."
+
+Here is an aditional task age, not related to this one.
+
+--------------------------------------------------------------------------------------------
+
+7. Magic Methods
+
+Create a class Point that:
+Represents a 2D point with x and y coordinates.
+Supports addition of two points using the + operator.
+Supports string representation of a point, e.g., "(x, y)".
+
+Task:
+p1 = Point(1, 2)
+p2 = Point(3, 4)
+p3 = p1 + p2
+print(p3)  # Output: "(4, 6)"
+
+--------------------------------------------------------------------------------------------
+
+8. Abstract Classes
+
+Write an abstract class Animal with:
+An abstract method make_sound().
+Subclasses Dog and Cat that implement make_sound().
+
+Task:
+animals = [Dog(), Cat()]
+for animal in animals:
+    animal.make_sound()
+# Output:
+# "Woof!"
+# "Meow!"
+
+--------------------------------------------------------------------------------------------
+
+9. Property Decorators
+
+Create a class Rectangle that:
+Has attributes width and height.
+Uses the @property decorator to calculate the area and perimeter dynamically.
+
+Task:
+rect = Rectangle(4, 5)
+print(rect.area)  # Output: 20
+print(rect.perimeter)  # Output: 18
+
+--------------------------------------------------------------------------------------------
+
+10. Multiple Inheritance
+
+Create two classes Flyable and Swimmable:
+Flyable has a method fly() that prints "I can fly!".
+Swimmable has a method swim() that prints "I can swim!".
+Create a class Duck that inherits both and demonstrates flying and swimming.
+
+Task:
+duck = Duck()
+duck.fly()  # Output: "I can fly!"
+duck.swim()  # Output: "I can swim!"
+
+--------------------------------------------------------------------------------------------
+
+11. Class Relationships
+
+Create a class Engine and a class Car:
+Engine has attributes like horsepower.
+Car contains an instance of Engine and uses it to display its details.
+
+Task:
+engine = Engine(200)
+car = Car("Toyota", engine)
+car.show_details()  # Output: "Make: Toyota, Engine Horsepower: 200"
+
+--------------------------------------------------------------------------------------------
+
+12. Exception Handling in Classes
+
+Create a class TemperatureConverter that:
+Converts Celsius to Fahrenheit and vice versa.
+Raises a ValueError if a negative temperature is passed.
+
+Task:
+try:
+    converter = TemperatureConverter()
+    print(converter.to_fahrenheit(-10))  # Raises ValueError
+except ValueError as e:
+    print(e)  # Output: "Temperature cannot be negative."
+
+--------------------------------------------------------------------------------------------
+
+13. Singleton Class
+
+Implement a singleton pattern using a class DatabaseConnection to ensure only one instance of the class exists.
+
+Task:
+db1 = DatabaseConnection()
+db2 = DatabaseConnection()
+print(db1 is db2)  # Output: True
